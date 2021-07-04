@@ -4,8 +4,12 @@
 <td>
   <%= form_for(user) do |f| %>
     <%= f.select(:role, User.roles.keys.map {|role| [role.titleize,role]}) %>
+    <%if user.doctor?%>
+    <%= f.collection_select :department_id, Department.all, :id, :name, prompt: true %>
+    <%= f.collection_select :slot_id, Slot.all, :id, :shift, prompt: true %>
+    <%end%>
     <td>
-    <button><%= f.submit 'Change Role' %></button>
+    <button><%= f.submit 'Update' %></button>
     </td>
   <% end %>
 </td>

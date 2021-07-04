@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-
+  has_one :department
+  has_many :slots
   enum role: [:admin, :doctor, :user]
 	after_initialize :set_default_role, :if => :new_record?
 

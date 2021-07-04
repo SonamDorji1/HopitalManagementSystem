@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  on_date: 2021-07-04
+  doctor: MyString
+  department: MyString
+  shift: MyString
+  start_time: MyString
+  end_time: MyString
+  user_id: 1
+
+two:
+  on_date: 2021-07-04
+  doctor: MyString
+  department: MyString
+  shift: MyString
+  start_time: MyString
+  end_time: MyString
+  user_id: 1
